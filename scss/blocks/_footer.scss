@@ -1,0 +1,32 @@
+.footer {
+	background-color: $almost-black;
+
+    &__wrapper {
+        min-height: 79px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    & p {
+        @include font(16px, 19px);
+        color: $almost-white;
+    }
+    
+    &__links-element {
+        padding-right: 7.29px;
+    }
+}
+
+.element{
+    &__onecolor:hover, &__onecolor:focus {
+        fill: $dark-pink;
+    }
+}
+
+@media (max-width: 450px) {
+    .footer__wrapper {
+        flex-direction: column-reverse;
+        padding: 43px 0 9px;
+    }
+}

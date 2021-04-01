@@ -1,0 +1,146 @@
+.header {
+	background-color: $dark-blue;
+	position: relative;
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 75px;
+    }
+
+    &__controls {
+        display: flex;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+
+    &__loupe {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        outline: none;
+        margin-right: 15px;
+    }
+
+    &__search {
+        position: relative;
+        display: none;
+    }
+
+    &__icon {
+        fill: $white;
+
+        &:hover, 
+        &:focus {
+           fill: $dark-pink; 
+        }
+    }
+
+    &__button {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        margin: 0 34px 0 0;
+        cursor: pointer;
+    }
+
+    &__profile {
+	    margin: 0 34px 0 0;
+    }
+
+    &__navigation {
+        display: none;
+        position: absolute;
+        width: 232px;
+        top: 100%;
+        right: 0;
+        background: $white;
+        z-index: 1;
+        min-height: 764px;
+
+        &-menu {
+            @include font(14px, 17px, 700);
+            color: $black;
+            text-transform: uppercase;
+            padding: 37px 0 4px 34px;
+        }
+
+        & h2 {
+            @include font(14px, 17px, normal);
+            color: $dark-pink;
+            text-transform: uppercase;
+            padding: 20px 0 12px 34px;
+        }
+
+        &-list li {
+            padding-left: 54px;
+        }
+
+        &-list li:not(:last-child) {
+            padding-bottom: 11px;
+        }
+
+        &-last-item {
+            padding-bottom: 11px;
+        }
+
+        & a {
+            color: $middle-gray;
+            text-decoration: none;
+            list-style: none;
+
+            &:hover {
+                color: $soft-gray;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.display-block {
+	display: block;
+}
+
+[type="search"] {
+	padding: 9px 20px;
+	border: none;
+	outline: none;
+	border-radius: 30px;
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        &__logo {
+            margin: 0 41px 0 16px;
+        }
+
+        &__cart {
+            margin: 0 16px 0 0;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        &__profile, &__cart {
+            display: none;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

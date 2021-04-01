@@ -1,0 +1,86 @@
+.offers {
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__text-woman, &__text-man, &__text-kids {
+        padding: 30% 0;
+    }
+
+    &__text-accesories {
+        padding: 6% 0;
+    }
+
+    &__item {
+        @include size(32%);
+        background-color: $brown;
+        display: block;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+        text-align: center;
+        align-items: center;
+
+        @include tablet {
+            margin-bottom: 19.3px;
+        }
+
+        @include mobile {
+            width: 100%;
+            flex-grow: 1;
+            margin-bottom: 30px;
+        }
+
+        &-woman {
+            background-image: url(../img/offers_woman.jpg);
+            background-position: center;
+            flex-direction: column;
+        }
+
+        &-man {
+            background-image: url(../img/offers_man.jpg);
+            background-position: center;
+            flex-direction: column;
+        }
+
+        &-kids {
+            background-image: url(../img/offers_kids.jpg);
+            background-position: center;
+            flex-direction: column;
+        }
+
+        &-accesories {
+            @include size(100%);
+            background-image: url(../img/offers_accesories.jpg);
+            background-position: center;
+            flex-direction: column;
+
+            @include tablet {
+                max-height: 116px;
+
+            }
+        }
+
+        & h3 {
+            @include font(16px, 19px, normal);
+            text-align: center;
+            color: $white;
+            text-transform: uppercase;
+        }
+
+        & p {
+            @include font(24px, 29px, 700);
+            color: $dark-pink;
+            text-transform: uppercase;
+        }
+    }
+}
+
+
+
