@@ -1,0 +1,169 @@
+.registration {
+	background: $light-pink;
+	min-height: 148px;
+
+    &__title {
+        @include font(24px, 29px);
+        color: $dark-pink;
+        text-transform: uppercase;
+        padding: 60px 0;
+    }
+
+    &_form {
+        &-block {
+            display: block;
+        }
+
+        &__wrapper {
+            display: flex;
+
+            &-form label {
+                @include font(16px, 19px, 300);
+                color: $dark-blue;
+                padding-top: 35px;
+
+                &:first-child {
+                    padding-top: 64px;
+                }
+
+                @include mobile {
+                    max-width: 95%;
+                }
+            }
+
+            &-text {
+                margin-left: 9%;
+
+                & h2, & p, 
+                & li {
+                    @include font(24px, 29px, 300);
+                    color: $black;
+                }
+
+                & h2 {
+                    padding: 64px 0 22px 0;
+                }
+                
+                & p {
+                    padding-bottom: 21px;
+                }
+                
+                & li {
+                    padding-bottom: 16px;
+                    position: relative;
+                    padding-left: 45px;
+
+                    &::before {
+                        @include size(20px, 16px);
+                        content: '';
+                        background: url(../img/registration_check.svg);
+                        position: absolute;
+                        top: 7px;
+                        left: 0;
+                    }
+                }
+            }
+        }
+
+        &-input {
+            @include size(360px, 45px);
+            @include font(13px, 16px, 300);
+            border: 1px solid $rain;
+            padding-left: 12px;
+            color: $dirty-rain;
+        }
+
+        &-gender {
+            display: none;
+        }
+
+        &-label {
+            margin: 0 0 0 30px;
+            padding: 0 0 0 10px;
+            position: relative;
+
+            &:before {
+                @include size(17px, 17px);
+                position: absolute;
+                content: '';
+                border: 1px solid $rain;
+                box-sizing: border-box;
+                border-radius: 50%;
+                left: -20px;
+                top: 38px;
+            }
+        }
+
+        &-gender:checked+&-label:before {
+            background: $dark-pink;
+            background-size: 10px 10px;
+        }
+
+        &-advice {
+            @include font(13px, 16px, 300);
+            max-width: 360px;
+            color: $dirty-rain;
+            padding: 15.5px 0 39px 0;
+        }
+        
+        &-join {
+            @include font(14px, 17px, normal);
+            color: $white;
+            text-transform: uppercase;
+            padding: 16px 24.5px 17px 29px;
+            background-color: $dark-pink;
+            border: none;
+            margin-bottom: 96px;
+            cursor: pointer;
+
+            &-img {
+                padding-left: 20px;
+            }
+        }
+    }
+
+
+}
+
+.first-child {
+	margin: 20px 0 20px 0;
+}
+
+.gender-block {
+	padding-top: 31.5px;
+}
+
+@media (max-width: 950px) {
+    .registration_form__wrapper-text {
+        margin-left: 3%;
+
+        & h2, & p, & li {
+            @include font(16px, 19px, 300);
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .registration_form__wrapper {
+        flex-direction: column;
+        align-items: center;
+
+        &-text {
+            margin-bottom: 100px;
+        }
+    }
+
+    .registration_form-join {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 400px) {
+    .registration_form-input {
+        width: 100%;
+    }
+
+    .registration__title {
+        text-align: center;
+    }
+}

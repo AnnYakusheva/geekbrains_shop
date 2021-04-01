@@ -1,0 +1,134 @@
+.products {
+    &__title {
+        @include font(30px, 36px);
+        color: $dark-blue;
+        margin: 90px 0 5px;
+        text-align: center;
+
+        @include tablet {
+            margin: 154px 0 5px;
+        }
+    }
+
+    &__subtitle {
+        @include font(14px, 17px);
+        color: $soft-gray;
+        margin-bottom: 48px;
+        text-align: center;
+
+        @include tablet {
+            margin-bottom: 73px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        background-color: $dirty-white;
+        margin-bottom: 30px;
+        max-width: 32%;
+
+        @include mobile {
+            min-width: 100%;
+        }
+
+        &-overlay {
+            position: relative;
+
+            &::before {
+                display: none;
+                @include size(100%, 100%);       
+                content: '';
+                position: absolute;
+                background: rgba(0, 0, 0, 0.7);
+                top: 0;
+            }
+        }
+
+        &-button {
+            display: none;
+            border: 1px solid $white;
+            fill: $white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;	
+            cursor: grab;
+        }
+
+        &-text {
+            padding: 0 16px 20px;
+        }
+
+        & h3 {
+            @include font(13px, 16px);
+            padding: 25.35px 0 12.65px;
+            text-transform: uppercase;
+        }
+
+        & p {
+            @include font(14px, 17px, 300);
+            width: 100%;
+            padding-bottom: 18px;
+            color: $dark-gray;
+        }
+
+        & span {
+            @include font(16px, 19px);
+            color: $dark-pink;
+        }
+
+        &:hover &-overlay::before,
+        &:hover &-button {
+            display: block;
+        }
+    }
+
+    &__button {
+        margin: 48.5px auto 95.5px;
+        text-align: center;
+
+        @include tablet {
+            margin: 32px auto 65px;
+        }
+
+        & a {
+            @include font(16px, 19px, normal);
+            border: 1px solid $hot-pink;
+            color: $flamingo;
+            padding: 14.5px 38.5px 13.5px;
+            text-decoration: none;
+
+            &:hover, &:focus {
+                color: $white;
+                background-color: $hot-pink;
+            }
+        }
+    }
+
+    
+}
+
+.button {
+    &__container {
+        display: inline-flex;
+        padding: 8px;
+    }
+
+    &__addto {
+        @include font(14px, 17px);
+        color: $white;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 890px) {
+    .products__item {
+        max-width: 47%;
+    }
+}

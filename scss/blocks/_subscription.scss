@@ -1,0 +1,109 @@
+.subscription {
+    @include size(auto, 448px);
+	background: no-repeat url(../img/subscription_background.jpg);
+    background-size: 100% 100%;
+	display: flex;
+	align-items: center;
+
+    @include tablet {
+        min-height: 536px;
+    }
+
+    &__block {
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+            align-items: center;
+            flex-direction: column;
+        }
+    }
+    
+    &__review {
+        width: 359.45px;
+        text-align: center;
+
+        @include tablet {
+            margin-bottom: 48px;
+        }
+
+        & p {
+            @include font(20px, 24px, 400);
+
+            @include mobile {
+                @include font(19px, 22.8px);
+            }
+        }
+        
+        & span {
+            @include font(20px, 24px, 400, italic);
+
+            @include mobile {
+                @include font(19px, 22.8px, 400, italic);
+            }
+        }
+        
+        & img {
+            margin-bottom: 30px;
+            border-radius: 50%;
+        }
+    }
+
+    &__form {
+        display: block;
+        text-align: center;
+
+        & h3 {	
+            @include font(18px, 30px, 400);
+            padding-bottom: 32px;
+            text-transform: uppercase;
+
+            @include tablet {
+                padding-bottom: 27px;
+            }
+
+            @include mobile {
+                @include font(14px, 21.5px);
+            }
+        }
+        
+        & span {
+            @include font(24px, 38px, 700);
+            display: block;
+            text-transform: uppercase;
+        }
+        
+        &-input input {
+            @include size(270px, 36px);
+            @include font(14px, 17px, 400);
+            background: $light-grey;
+            border-radius: 30px;
+            text-align: left;
+            color: $almost-black;
+            opacity: 0.67;
+            position: relative;
+            border: none;
+            outline: none;
+            padding: 7px 64px 6px 20px;
+        }
+        
+        &-button {
+            position: absolute;
+        }
+    }
+
+    &__button {
+        @include size(100px, 49px);
+        @include font(14px, 17px);
+        background: $dark-pink;
+        text-align: center;
+        color: $white;
+        border-radius: 0 30px 30px 0;
+        position: absolute;
+        border: none;
+        outline: none;
+        top: -50px;
+        left: 250px;
+        cursor: pointer;
+    }
+}

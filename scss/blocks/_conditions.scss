@@ -1,0 +1,36 @@
+.conditions {
+	background-color: $almost-black;
+	min-height: 341px;
+	display: flex;
+	align-items: center;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        
+        @include tablet {
+            flex-direction: column;
+            margin: 48px 26.5% 16px;
+        }
+    }
+
+    &__item {
+        text-align: center;
+
+        @include tablet {
+            margin-bottom: 48px;
+        }
+        
+        & h3 {
+            @include font(20px, 24px, 400);
+            color: $almost-white;
+            padding: 19.7px 0 16px; 
+        }
+
+        & p {
+            @include font(14px, 17px, 300);
+            color: $almost-white;
+            text-align: center;
+        }
+    }
+}
